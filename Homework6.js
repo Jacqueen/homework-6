@@ -238,15 +238,15 @@ const drawField = function()
 	drawLine(0,400,600,400);
 };
 
-var canvas =  document.getstringById('canvas');
+var canvas =  document.getElementById('canvas');
 var context =  canvas.getContext('2d');
 drawField();
 context.strokeStyle = "grey";
 context.stroke();
 
 
-var imgX = document.getstringById("x");
-var imgO = document.getstringById("o");
+var imgX = document.getElementById("x");
+var imgO = document.getElementById("o");
 var locAndCoordinates = 
 	[
 		[[0,0], [50,50]],
