@@ -1,77 +1,77 @@
-//recursion 
-var switching = false; 
+// //recursion 
+// var switching = false; 
 
 
-const signs = function (n, type) {
-	if (n===0) {
-		return "";
-	}
+// const signs = function (n, type) {
+	// if (n===0) {
+		// return "";
+	// }
 
-	return type + signs(n-1, type); 
-};
+	// return type + signs(n-1, type); 
+// };
 
-const spaces = function(n) {
-	if (n===0) {
-		return "";
-	}
+// const spaces = function(n) {
+	// if (n===0) {
+		// return "";
+	// }
 
-	return " " + spaces(n-1); 
-};
+	// return " " + spaces(n-1); 
+// };
 
-const diamond = function(height,type){
-  if(height %2 ===0){
-    height=height+1;
-  }
-const signsAndSpaces = function(number,sign,type,space){
-	if(number===0){
-		return "";
-	}
-	console.log(spaces(space)+signs(sign,type));
-	if (space !== 0 && switching === false) {
-		signsAndSpaces(number-1,sign+2,type,space-1);
-	}
-	else if (space === 0 || switching === true) {
-	  switching = true;
-		signsAndSpaces(number-1,sign-2,type,space+1);
-	}
-};
+// const diamond = function(height,type){
+  // if(height %2 ===0){
+    // height=height+1;
+  // }
+// const signsAndSpaces = function(number,sign,type,space){
+	// if(number===0){
+		// return "";
+	// }
+	// console.log(spaces(space)+signs(sign,type));
+	// if (space !== 0 && switching === false) {
+		// signsAndSpaces(number-1,sign+2,type,space-1);
+	// }
+	// else if (space === 0 || switching === true) {
+	  // switching = true;
+		// signsAndSpaces(number-1,sign-2,type,space+1);
+	// }
+// };
 
-	signsAndSpaces(height,1,type,(height-1)/2);
-};
-diamond(4,"@");
-
-
+	// signsAndSpaces(height,1,type,(height-1)/2);
+// };
+// diamond(4,"@");
 
 
-//loop 
-const diamond = function(length,sgn){
+
+
+// //loop 
+// const diamond = function(length,sgn){
   
-  if(length % 2 === 0){
-    length = length + 1;
-  }
+  // if(length % 2 === 0){
+    // length = length + 1;
+  // }
   
-const string = function(n,type){
-  let x = '';
-  for(let i = 0; i < n; i++){
-    x += type;
-  }
-  return x;
-}
-let spaces = (length-1)/2;
-let signs = 1;
-for(let i = 1; i <= length; i++){
-  console.log(string(spaces, " ") + string(signs,sgn));
-if(i <= length/2){
-  spaces = spaces - 1;
-  signs = signs + 2
-}
-else{
-  spaces++;
-  signs -= 2
-}
-}
-}
-diamond(9,"*");
+// const string = function(n,type){
+  // let x = '';
+  // for(let i = 0; i < n; i++){
+    // x += type;
+  // }
+  // return x;
+// }
+// let spaces = (length-1)/2;
+// let signs = 1;
+// for(let i = 1; i <= length; i++){
+  // console.log(string(spaces, " ") + string(signs,sgn));
+// if(i <= length/2){
+  // spaces = spaces - 1;
+  // signs = signs + 2
+// }
+// else{
+  // spaces++;
+  // signs -= 2
+// }
+// }
+// }
+// diamond(9,"*");
 
 
 //Tic Tac Toe
